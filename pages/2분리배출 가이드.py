@@ -72,7 +72,7 @@ with tab3:
     col1, col2, col3 = st.columns([1, 2, 5], vertical_alignment="center")
     col1.markdown('''비닐포장재  
     1회용 비닐봉투''')
-    col2.image('images/vinyl.png')
+    col2.image('images/vinyl.PNG')
     col3.write(''':black_small_square: PET, PVC, PE, PP, PS, PSP 재질 등의 용기·트레이류  
     :black_small_square: 내용물을 비우고 물로 헹구는 등 이물질을 제거하여 배출   
     :black_small_square: 흩날리지 않도록 봉투에 담아 배출''')
@@ -93,7 +93,7 @@ with tab4:
     col1, col2, col3 = st.columns([1, 2, 5], vertical_alignment="center")
     col1.markdown('''스티로폼  
     완충재''')
-    col2.image('images/sti.png')
+    col2.image('images/sti.PNG')
     col3.write(''':black_small_square: 내용물을 비우고 물로 헹구는 등 이물질을 제거하여 배출  
     :black_small_square: 부착상표 등 스티로폼과 다른 재질은 제거한 후 배출       
     :black_small_square: TV 등 전자제품 구입 시 완충재로 사용되는 발포합성수지 포장재는 가급적 구입처로 반납  
@@ -115,7 +115,7 @@ with tab5:
     st.write('')
     col1, col2, col3 = st.columns([1, 2, 4], vertical_alignment="center")
     col1.markdown('유리병류')
-    col2.image('images/crystal.png')
+    col2.image('images/crystal.PNG')
     col3.write(''':black_small_square: 내용물을 비우고 물로 헹구는 등 이물질을 제거하여 배출  
     :black_small_square: 유리병이 깨지지 않도록 주의하여 배출  
     :black_small_square: 소주, 맥주 등 빈용기보증금 대상 유리병은 소매점 등으로 반납하여 보증금 환급  
@@ -136,7 +136,7 @@ with tab6:
     st.write('')
     col1, col2, col3 = st.columns([1,1,5], vertical_alignment="center")
     col1.markdown('신문')
-    col2.image('images/newspaper.png')
+    col2.image('images/newspaper.PNG')
     col3.write(':black_small_square: 물기에 젖지 않도록 하고, 흩날리지 않도록 묶어서 배출')
     col3.write(''':x: 비해당품목  
     비닐 코팅 종이(광고지, 치킨 속포장재 등), 금박·은박지, 벽지, 자석전단지, 이물질을 제거하기 어려운 경우 등''')
@@ -144,7 +144,7 @@ with tab6:
     st.divider()
     col1, col2, col3 = st.columns([1,1,5], vertical_alignment="center")
     col1.markdown('책자/노트')
-    col2.image('images/book.png')
+    col2.image('images/book.PNG')
     col3.write(':black_small_square: 스프링 등 종이류와 다른 재질은 제거한 후 배출')
     col3.write(''':o: 해당품목  
     책, 잡지, 공책, 노트 등''')
@@ -155,7 +155,7 @@ with tab6:
     st.divider()
     col1, col2, col3 = st.columns([1, 1, 5], vertical_alignment="center")
     col1.markdown('상자류')
-    col2.image('images/box.png')
+    col2.image('images/box.PNG')
     col3.write(':black_small_square: 테이프 등 종이류와 다른 재질은 제거한 후 배출')
     col3.write(''':o: 해당품목  
     종이박스, 골판지 등''')
@@ -167,9 +167,9 @@ with tab6:
     st.markdown(':star: **종이류로 배출하면 안되는 품목** :star:')
     st.write('')
     col1, col2, col3 = st.columns(3)
-    col1.image('images/notpaper1.png')
-    col2.image('images/notpaper2.png')
-    col3.image('images/notpaper3.png')
+    col1.image('images/notpaper1.PNG')
+    col2.image('images/notpaper2.PNG')
+    col3.image('images/notpaper3.PNG')
     col3.write(':blue-background[강남구] : 컵라면 용기는 세척 후 종이류로 배출 가능')
 
 # 종이팩
@@ -177,7 +177,7 @@ with tab7:
     st.write('')
     col1, col2, col3 = st.columns([1, 1, 5], vertical_alignment="center")
     col1.markdown('종이팩')
-    col2.image('images/pack.png')
+    col2.image('images/pack.PNG')
     col3.write(''':black_small_square: 내용물을 비우고 물로 헹구는 등 이물질을 제거하고 말린 후 배출  
         :black_small_square: 빨대, 비닐 등 종이팩과 다른 재질은 제거한 후 배출  
         :black_small_square: 종이팩 전용수거함이 없는 경우에는 종이류와 구분할 수 있도록 가급적 끈 등으로 묶어 종이류 수거함으로 배출''')
@@ -187,19 +187,19 @@ with tab7:
         종이류, 종이컵 등 (종이류 수거함으로 배출)''')
     st.write('')
     st.write('')
-    st.image('images/pack_guide.png')
+    st.image('images/pack_guide.PNG')
 
 # 페트병
 with tab8:
     st.write('')
     col1, col2, col3 = st.columns([1, 2, 4], vertical_alignment="center")
     col1.markdown('페트')
-    col2.image('images/pet.png')
+    col2.image('images/pet.PNG')
     col3.write(''':black_small_square: 내용물을 비우고 물로 헹구는 등 이물질을 제거하여 배출  
     :black_small_square: 부착상표, 부속품 등 본체와 다른 재질은 제거  
     :black_small_square: 압착하여 뚜껑을 닫아 배출  
     :black_small_square: :blue-background[송파구] : 종량제봉투 교환가능(각 동 주민센터)''')
-    col3.image('images/label.png')
+    col3.image('images/label.PNG')
 
     st.divider()
     st.write(''':o: 해당품목  
@@ -212,7 +212,7 @@ with tab9:
     st.write('')
     col1, col2, col3 = st.columns([0.5, 1, 4], vertical_alignment="center")
     col1.markdown('페트')
-    col2.image('images/plastic.png')
+    col2.image('images/plastic.PNG')
     col3.write(''':black_small_square: 내용물을 비우고 물로 헹구는 등 이물질을 제거하여 배출  
     :black_small_square: 물로 헹굴 수 없는 구조의 용기류(치약용기 등)는 내용물을 비운 후 배출   
     :black_small_square: 부착상표, 부속품 등 본체와 다른 재질은 제거한 후 배출''')
