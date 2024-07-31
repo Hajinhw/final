@@ -9,7 +9,7 @@ st.set_page_config(
 
 st.header('가비지타임')
 
-st.image('images//main.png')
+st.image('images/main.png')
 st.write('')
 st.text(' "헷갈리는 분리배출 완전정복" ')
 st.divider()
@@ -18,7 +18,7 @@ st.subheader(':mag: 서비스 소개')
 st.write('')
 st.write('')
 col1, col2 = st.columns(2)
-col2.image('images//recycling.png')
+col2.image('images/recycling.png')
 col1.subheader('Recycling')
 col1.divider()
 col1.markdown('''재활용품 이미지를 업로드하면, 환경부 분리배출 기준에 따라 항목을 분류합니다.  
@@ -29,7 +29,7 @@ button1 = col1.button('바로가기', key='a')
 st.write('')
 st.write('')
 col1, col2 = st.columns(2)
-col2.image('images//guide.png')
+col2.image('images/guide.png')
 col1.subheader('Guide')
 col1.divider()
 col1.markdown('''재활용품 분리배출 가이드를 제공합니다.  
