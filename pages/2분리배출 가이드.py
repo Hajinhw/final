@@ -13,7 +13,7 @@ tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs(['고철류', '�
 with tab1:
     st.write('')
     col1, col2 = st.columns(2, vertical_alignment="center")
-    col1.image('images/fe.png')
+    col1.image('images/fe.PNG')
     col1.write('')
     col2.markdown(':black_small_square: 이물질이 섞이지 않도록 한 후 봉투에 넣거나 끈으로 묶어서 배출')
 
@@ -39,7 +39,7 @@ with tab2:
     st.write('')
     col1, col2, col3 = st.columns([1, 2, 4], vertical_alignment="center")
     col1.markdown('철캔/알루미늄캔')
-    col2.image('images/can.png')
+    col2.image('images/can.PNG')
     col3.write(''':black_small_square: 내용물을 비우고 물로 헹구는 등 이물질을 제거하여 배출  
     :black_small_square: 담배꽁초 등 이물질을 넣지 않고 배출  
     :black_small_square: 플라스틱 뚜껑 등 금속캔과 다른 재질은 제거한 후 배출''')
@@ -52,7 +52,7 @@ with tab2:
     col1, col2, col3 = st.columns([1, 2, 4], vertical_alignment="center")
     col1.markdown('''부탄가스  
     살충제용기''')
-    col2.image('images/gas.png')
+    col2.image('images/gas.PNG')
     col3.write(''':black_small_square: 내용물을 제거한 후 배출   
     :black_small_square: 가스용기는 내용물을 완전히 제거한 후 배출''')
     col3.write(''':o: 해당품목  
@@ -61,7 +61,7 @@ with tab2:
     st.divider()
     col1, col2, col3 = st.columns([1.5, 1.5, 4], vertical_alignment="center")
     col1.markdown('내용물이 남아있는 캔류(락카, 페인트통 등)')
-    col2.image('images/roc.png')
+    col2.image('images/roc.PNG')
     col3.write(''':black_small_square: :blue-background[구로구]: 페인트/오일 등 담았던 캔 제외  
     :black_small_square: :orange-background[마포구]: 페인트, 오일, 유해성물질포장통 제외  
     :black_small_square: :green-background[강서구]: 특수규격마대에 담아 배출''')
