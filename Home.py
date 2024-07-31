@@ -25,7 +25,8 @@ col1.markdown('''재활용품 이미지를 업로드하면, 환경부 분리배�
 AI를 활용하여 한 이미지 안에 서로 다른 여러 물질이 있어도 모두 인식하여 분류할 수 있습니다.  
 휴대폰으로 서비스 이용 시, 휴대폰 카메라로 재활용 사진을 촬영하여 실시간으로 분류해볼 수 있습니다.''')
 col1.write('')
-button1 = col1.button('바로가기', key='a')
+col1.link_button('바로가기', "https://hajinhw-final-home-smsg6m.streamlit.app/%EC%9E%AC%ED%99%9C%EC%9A%A9%ED%92%88_%EB%B6%84%EB%A5%98%EA%B8%B0")
+
 st.write('')
 st.write('')
 col1, col2 = st.columns(2)
@@ -36,7 +37,7 @@ col1.markdown('''재활용품 분리배출 가이드를 제공합니다.
 환경부 기준과 서울시 각 구청별 기준에 따라 각 항목별 분리배출 정보를 보여줍니다.
 ''')
 col1.write('')
-button2 = col1.button('바로가기', key='b')
+col1.link_button('바로가기', "https://hajinhw-final-home-smsg6m.streamlit.app/%EB%B6%84%EB%A6%AC%EB%B0%B0%EC%B6%9C_%EA%B0%80%EC%9D%B4%EB%93%9C")
 
 st.divider()
 
