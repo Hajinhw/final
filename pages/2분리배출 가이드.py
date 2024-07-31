@@ -61,7 +61,7 @@ with tab2:
     st.divider()
     col1, col2, col3 = st.columns([1.5, 1.5, 4], vertical_alignment="center")
     col1.markdown('내용물이 남아있는 캔류(락카, 페인트통 등)')
-    col2.image('images/roc.PNG')
+    col2.image('images/roc.png')
     col3.write(''':black_small_square: :blue-background[구로구]: 페인트/오일 등 담았던 캔 제외  
     :black_small_square: :orange-background[마포구]: 페인트, 오일, 유해성물질포장통 제외  
     :black_small_square: :green-background[강서구]: 특수규격마대에 담아 배출''')
