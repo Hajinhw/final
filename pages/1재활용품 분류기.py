@@ -37,6 +37,10 @@ with tab1:
         col2.text('')
         col2.image(annotated_image, channels="BGR", caption="재활용 분류 결과")
 
+    st.write(''':bulb: 이물질이 묻어있다면 이물질을 깨끗하게 제거하고 재활용하거나,  
+    이물질 제거가 어려우면 일반쓰레기로 배출해주세요!  
+    다중포장재는 제거 후 따로 재활용 해주세요!''')
+
 
 # 사진 촬영
 with tab2:
@@ -57,3 +61,8 @@ with tab2:
         # 결과 이미지 출력
         st.text('')
         st.image(annotated_image2, channels="BGR", caption="재활용 분류 결과")
+
+    st.write(''':bulb: 이물질이 묻어있다면 이물질을 깨끗하게 제거하고 재활용하거나,  
+        이물질 제거가 어려우면 일반쓰레기로 배출해주세요!  
+        다중포장재는 제거 후 따로 재활용 해주세요!''')
+
