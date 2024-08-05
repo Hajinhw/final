@@ -46,7 +46,23 @@ with tab1:
         st.markdown('')
         for i in range(co):
             if clss[i] == 0:
-                st.write(f':heavy_check_mark: :blue-background[종이팩] (약 {np.round(conff[i], 2) * 100} %)')
+                st.write(f'{i+1}. :blue-background[종이팩] (약 {np.round(conff[i], 2) * 100} %)')
+            if clss[i] == 1:
+                st.write(f'{i+1}. :blue-background[종이컵] (약 {np.round(conff[i], 2) * 100} %)')
+            if clss[i] == 2:
+                st.write(f'{i+1}. :blue-background[종이컵+이물질] (약 {np.round(conff[i], 2) * 100} %)')
+            if clss[i] == 3:
+                st.write(f'{i+1}. :blue-background[플라스틱] (약 {np.round(conff[i], 2) * 100} %)')
+            if clss[i] == 4:
+                st.write(f'{i+1}. :blue-background[플라스틱+이물질] (약 {np.round(conff[i], 2) * 100} %)')
+            if clss[i] == 5:
+                st.write(f'{i+1}. :blue-background[페트] (약 {np.round(conff[i], 2) * 100} %)')
+            if clss[i] == 6:
+                st.write(f'{i+1}. :blue-background[페트+이물질] (약 {np.round(conff[i], 2) * 100} %)')
+            if clss[i] == 7:
+                st.write(f'{i+1}. :blue-background[페트+다중포장재] (약 {np.round(conff[i], 2) * 100} %)')
+            if clss[i] == 8:
+                st.write(f'{i+1}. :blue-background[페트+이물질+다중포장재] (약 {np.round(conff[i], 2) * 100} %)')
 
 
         st.divider()
