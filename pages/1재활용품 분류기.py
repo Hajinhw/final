@@ -159,24 +159,24 @@ with tab2:
         st.image(annotated_image2, channels="BGR", caption="재활용 분류 결과")
 
         st.markdown('')
-        clss = results[0].boxes.cls.tolist()
-        clss_set = list(set(results[0].boxes.cls.tolist()))
-        co_set = len(clss_set)
-        conff = results[0].boxes.conf.tolist()
-        co = len(clss)
+        clss2 = results2[0].boxes.cls.tolist()
+        clss_set2 = list(set(results2[0].boxes.cls.tolist()))
+        co_set2 = len(clss_set2)
+        conff2 = results2[0].boxes.conf.tolist()
+        co2 = len(clss2)
 
         st.divider()
         st.subheader('인식 결과')
         st.markdown('')
         for i in range(co):
-            if clss[i] == 0:
+            if clss2[i] == 0:
                 st.write(f':heavy_check_mark: :blue-background[종이팩] (약 {np.round(conff[i], 2) * 100} %)')
 
         st.divider()
         st.subheader('분류 가이드')
         st.markdown('')
-        for i in range(co_set):
-            if clss_set[i] == 0:
+        for i in range(co_set2):
+            if clss_set2[i] == 0:
                 st.write(f''':heavy_check_mark: :blue-background[종이팩]    
 
                                 플라스틱 빨대 등이나 이물질이 없는지 다시 한번 확인하고 말려서 배출해 주세요.  
@@ -184,21 +184,21 @@ with tab2:
         노원구의 경우 종이컵과 통합배출합니다.   
         종이팩 분리배출과 관련하여 자세한 사항은 분리배츨 가이드 페이지를 참고해주세요!''')
 
-            if clss_set[i] == 1:
+            if clss_set2[i] == 1:
                 st.write(f''':heavy_check_mark: :blue-background[종이컵]  
 
                                 이물질이 없는지 다시 한번 확인 후 종이컵으로 배출해 주세요.  
         종이류, 종이팩과 분리하여 배출합니다. 단, 노원구의 경우 종이팩과 통합배출합니다.  
         종이컵 분리배출과 관련하여 자세한 사항은 분리배츨 가이드 페이지를 참고해주세요!''')
 
-            if clss_set[i] == 2:
+            if clss_set2[i] == 2:
                 st.write(f''':heavy_check_mark: :blue-background[종이컵+이물질]  
 
                                 이물질이 묻어있는 종이컵으로 보입니다. 이물질 없이 깨끗이 씻은 후 말린 상태로 배출해 주세요.  
         만약 이물질 제거가 힘들다면, 일반쓰레기로 배출해 주세요.  
         종이컵 분리배출과 관련하여 자세한 사항은 분리배츨 가이드 페이지를 참고해주세요!''')
 
-            if clss_set[i] == 3:
+            if clss_set2[i] == 3:
                 st.write(f''':heavy_check_mark: :blue-background[플라스틱]  
 
                                 혼합플라스틱 또는 타재료와 함께 배출할 수 없으며, 이물질이 없는지 다시 한 번 확인 후 배출해 주세요.  
@@ -206,7 +206,7 @@ with tab2:
         관악구와 서대문구는 노끈을 플라스틱/비닐 등 원재료에 따라 분리배출 가능합니다.  
         플라스틱 분리배출과 관련하여 자세한 사항은 분리배츨 가이드 페이지를 참고해주세요!''')
 
-            if clss_set[i] == 4:
+            if clss_set2[i] == 4:
                 st.write(f''':heavy_check_mark: :blue-background[플라스틱+이물질]  
 
                                 이물질이 묻어있는 플라스틱으로 보입니다. 이물질 없이 깨끗이 씻은 후 배출해 주세요.  
@@ -214,7 +214,7 @@ with tab2:
         관악구와 서대문구는 노끈을 플라스틱/비닐 등 원재료에 따라 분리배출 가능합니다.   
         플라스틱 분리배출과 관련하여 자세한 사항은 분리배츨 가이드 페이지를 참고해주세요!''')
 
-            if clss_set[i] == 5:
+            if clss_set2[i] == 5:
                 st.write(f''':heavy_check_mark: :blue-background[페트]  
 
                                 이물질 또는 다른 재질은 없는지 확인 후 배출해 주세요.  
@@ -222,7 +222,7 @@ with tab2:
         은평구에서는 불투명한 페트병도 배출 불가능합니다.  
         페트 분리배출과 관련하여 자세한 사항은 분리배출 가이드 페이지를 참고해주세요!''')
 
-            if clss_set[i] == 6:
+            if clss_set2[i] == 6:
                 st.write(f''':heavy_check_mark: :blue-background[페트+이물질]  
 
                                 이물질이 묻어있는 페트로 보입니다. 이물질 없이 깨끗이 씻은 후 배출해 주세요.  
@@ -231,7 +231,7 @@ with tab2:
         은평구에서는 불투명한 페트병도 배출 불가능합니다.  
         페트 분리배출과 관련하여 자세한 사항은 분리배출 가이드 페이지를 참고해주세요!''')
 
-            if clss_set[i] == 7:
+            if clss_set2[i] == 7:
                 st.write(f''':heavy_check_mark: :blue-background[페트+다중포장재]  
 
                                 다중포장재가 포함된 페트로 보입니다. 포장재를 제거한 후 배출해 주세요.  
@@ -240,7 +240,7 @@ with tab2:
         은평구에서는 불투명한 페트병도 배출 불가능합니다.  
         페트 분리배출과 관련하여 자세한 사항은 분리배출 가이드 페이지를 참고해주세요!''')
 
-            if clss_set[i] == 8:
+            if clss_set2[i] == 8:
                 st.write(f''':heavy_check_mark: :blue-background[페트+이물질+다중포장재]  
 
                                 이물질과 다중포장재가 포함된 페트로 보입니다. 이물질과 포장재를 제거한 후 배출해 주세요.  
