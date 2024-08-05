@@ -49,6 +49,7 @@ st.markdown(':heavy_check_mark: 잘못된 분리배출로 인해 :blue-backgroun
 st.markdown('''- **유해성분 누출 위험**: 매립 및 소각되는 쓰레기의 증가로 인해 유해 성분이 누출될 위험 증가  
 - **환경오염**: 쓰레기 증가로 인한 토양, 수질, 대기 오염 등 환경오염 문제  
 - OECD 환경성과평가 기준 한국은 '재활용 모범국가’ 지만 (명목 재활용률 86.5%), 실질 재활용률은 22.7% 정도로 낮음''')
+st.image('images/earth.PNG')
 
 st.write('')
 st.markdown(':heavy_check_mark: 분리배출 위반 시 :blue-background[과태료 부과]')

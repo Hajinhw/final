@@ -4,6 +4,7 @@ import cv2
 import numpy as np
 
 
+
 st.subheader('재활용품 분류기')
 with st.container(border=False):
     st.info(''' AI를 활용하여 재활용품 항목을 분류합니다.  
@@ -15,7 +16,7 @@ tab1, tab2 = st.tabs(['이미지 업로드', '사진 촬영'])
 # 이미지 업로드
 with tab1:
     model = YOLO('model/best.pt')  # 사전 학습된 모델 사용
-    col1, col2 = st.columns(2)
+    col1, col2 = st.columns([3,5])
     uploaded_file = col1.file_uploader("이미지 파일을 등록해주세요", type=['png', 'jpg', 'jpeg'])
     if uploaded_file is not None:
         col1.image(uploaded_file)
@@ -32,18 +33,59 @@ with tab1:
 
         # 결과 이미지 출력
         col2.header('')
-        col2.header('')
         col2.markdown('')
+        col2.text('')
         col2.text('')
         col2.image(annotated_image, channels="BGR", caption="재활용 분류 결과")
 
-        col2.markdown('')
-        col2.markdown(''':bulb: 이물질이 묻어있다면 이물질을 깨끗하게 제거하고 재활용하거나,  
-        이물질 제거가 어려우면 일반쓰레기로 배출해주세요!  
-        다중포장재는 제거 후 따로 재활용 해주세요!''')
+        clss = results[0].boxes.cls.tolist()
+        conff = results[0].boxes.conf.tolist()
+        co = len(clss)
+        
+        for i in range(co):
+            if clss[i] == 0:
+                col2.write(f''':heavy_check_mark: :blue-background[종이팩] (약 {np.round(conff[i],2)*100,0} 퍼센트의 확률)  
+                            오염도가 적은 종이팩으로 보입니다. 깨끗한지 확인 후에 종이팩으로 배출해 주세요.  
+                            종이팩 분리배출과 관련하여 자세한 사항은 분리배츨 가이드 페이지를 참고해주세요!''')
 
-        col2.write(''':bulb: 결과 옆에 뜨는 숫자는 해당 품목일 확률을 나타냅니다.  
-        예를들어, 플라스틱 0.98이라면 플라스틱일 확률이 98% 라는 의미입니다!''')
+            if clss[i] == 1:
+                col2.write(f''':heavy_check_mark: :blue-background[종이컵] (약 {np.round(conff[i], 2) * 100} 퍼센트의 확률)  
+                            종이컵으로 분리배출 해주세요!''')
+
+            if clss[i] == 2:
+                col2.write(f''':heavy_check_mark: :blue-background[종이컵+이물질] (약 {np.round(conff[i], 2) * 100} 퍼센트의 확률)  
+                            종이컵+이물질''')
+
+            if clss[i] == 3:
+                col2.write(f''':heavy_check_mark: :blue-background[플라스틱] (약 {np.round(conff[i], 2) * 100} 퍼센트의 확률)  
+                            플라스틱''')
+
+            if clss[i] == 4:
+                col2.write(f''':heavy_check_mark: :blue-background[플라스틱+이물질] (약 {np.round(conff[i], 2) * 100} 퍼센트의 확률)  
+                            플라스틱+이물질''')
+
+            if clss[i] == 5:
+                col2.write(f''':heavy_check_mark: :blue-background[페트] (약 {np.round(conff[i], 2) * 100} 퍼센트의 확률)  
+                            페트''')
+
+            if clss[i] == 6:
+                col2.write(f''':heavy_check_mark: :blue-background[페트+이물질] (약 {np.round(conff[i], 2) * 100} 퍼센트의 확률)  
+                            페트+이물질''')
+
+            if clss[i] == 7:
+                col2.write(f''':heavy_check_mark: :blue-background[페트+다중포장재] (약 {np.round(conff[i], 2) * 100} 퍼센트의 확률)  
+                            페트+다중포장재''')
+
+            if clss[i] == 8:
+                col2.write(f''':heavy_check_mark: :blue-background[페트+이물질+다중포장재] (약 {np.round(conff[i], 2) * 100} 퍼센트의 확률)  
+                            페트+이물질+다중포장재''')
+
+
+        col2.write(':bulb: 인식 결과에 오류가 있을 수 있습니다 어쩌구')
+
+        col2.link_button('분리배출 가이드',
+                             "http://localhost:8501/%EB%B6%84%EB%A6%AC%EB%B0%B0%EC%B6%9C_%EA%B0%80%EC%9D%B4%EB%93%9C")
+
 
 
 # 사진 촬영
