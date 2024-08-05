@@ -168,7 +168,7 @@ with tab2:
         st.divider()
         st.subheader('인식 결과')
         st.markdown('')
-        for i in range(co):
+        for i in range(co2):
             if clss2[i] == 0:
                 st.write(f':heavy_check_mark: :blue-background[종이팩] (약 {np.round(conff[i], 2) * 100} %)')
 
