@@ -19,7 +19,7 @@ st.write('')
 st.write('')
 col1, col2 = st.columns(2)
 col2.image('images/recycling.PNG')
-col1.subheader('Recycling')
+col1.subheader('재활용품 분류기')
 col1.divider()
 col1.markdown('''재활용품 이미지를 업로드하면, 환경부 분리배출 기준에 따라 항목을 분류합니다.  
 AI를 활용하여 한 이미지 안에 서로 다른 여러 물질이 있어도 모두 인식하여 분류할 수 있습니다.  
@@ -31,7 +31,7 @@ st.write('')
 st.write('')
 col1, col2 = st.columns(2)
 col2.image('images/guide.PNG')
-col1.subheader('Guide')
+col1.subheader('분리배출 가이드')
 col1.divider()
 col1.markdown('''재활용품 분리배출 가이드를 제공합니다.  
 환경부 기준과 서울시 각 구청별 기준에 따라 각 항목별 분리배출 정보를 보여줍니다.

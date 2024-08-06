@@ -12,10 +12,12 @@ tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs(['고철류', '�
 # 고철류
 with tab1:
     st.write('')
-    col1, col2 = st.columns(2, vertical_alignment="center")
-    col1.image('images/fe.PNG')
-    col1.write('')
-    col2.markdown(':black_small_square: 이물질이 섞이지 않도록 한 후 봉투에 넣거나 끈으로 묶어서 배출')
+    col1, col2, col3 = st.columns([1,3,4], vertical_alignment="center")
+    col1.write('''고철   
+    비철금속''')
+    col2.image('images/fe.png')
+    # col1.write('')
+    col3.markdown(':black_small_square: 이물질이 섞이지 않도록 한 후 봉투에 넣거나 끈으로 묶어서 배출')
 
     st.divider()
     st.write(''':o: 해당품목  
@@ -211,7 +213,7 @@ with tab8:
 with tab9:
     st.write('')
     col1, col2, col3 = st.columns([0.5, 1, 4], vertical_alignment="center")
-    col1.markdown('페트')
+    col1.markdown('플라스틱')
     col2.image('images/plastic.PNG')
     col3.write(''':black_small_square: 내용물을 비우고 물로 헹구는 등 이물질을 제거하여 배출  
     :black_small_square: 물로 헹굴 수 없는 구조의 용기류(치약용기 등)는 내용물을 비운 후 배출   
