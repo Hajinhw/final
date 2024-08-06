@@ -1,5 +1,12 @@
 import streamlit as st
 
+st.set_page_config(
+    page_title='분리배출 가이드',
+    page_icon='🔥',
+    layout='wide',
+    initial_sidebar_state='auto'
+)
+
 st.subheader('분리배출 가이드')
 with st.container(border=False):
     st.info('''환경부 기준과 서울시 각 구청별 기준에 따라 각 항목별 분리배출 정보를 보여줍니다.  
